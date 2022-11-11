@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using OfficeOpenXml;
 using WebRazor.Models;
 
 namespace WebRazor.Pages.Product
@@ -104,6 +105,11 @@ namespace WebRazor.Pages.Product
             {
                 return list.Skip((currentPage - 1) * pageSize).ToList().Count;
             }
+        }
+
+        public void OnPost(IFormFile file)
+        {
+
         }
     }
 }
